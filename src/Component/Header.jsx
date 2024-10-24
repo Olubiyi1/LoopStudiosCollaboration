@@ -12,7 +12,7 @@ const Head = ()=>{
                 <Nav>
                     <img id="Logo" src={Logo} alt="Logo"/>
                         <Links>
-                            <p>About</p>}
+                            <p>About</p>
                             <p>Careers</p>
                             <p>Events</p>
                             <p>Products</p>
@@ -41,9 +41,16 @@ h1{
     border: 1.5px solid white;
     width: 300px;
     text-align: left;
-    margin-left: 150px;
+    margin-left: 50px;
     padding: 10px;
     line-height: 40px;
+
+    @media (max-width:715px ){
+        margin: 100px auto;
+        font-size: 50px;
+        line-height: 60px;
+        width: 400px;
+    }
 }
 `
 const Nav=styled.nav`
@@ -51,9 +58,26 @@ const Nav=styled.nav`
     justify-content: space-between;
     align-items: center;
     align-items: center;
+    
+    @media (max-width:715px ){
+       border: 2px solid white;
+        
+    }
+        
+    }
 
     #Logo{
-        margin-left: 150px;
+        margin-left: 50px;
+
+        @media (max-width:715px ){
+        margin: 0px;
+        margin-left:100px;
+        
+    }
+    }
+
+    @media (max-width:715px ){
+        flex-direction: column;
     }
     
 `
@@ -62,6 +86,10 @@ const Links=styled.nav`
     color: white;
     width: 400px;
     justify-content: space-between;
-    margin-right: 150px;
+    margin-right: 50px;
     padding: 10px;
+
+    @media (max-width:715px ){
+        display: none;
+    }
 `
